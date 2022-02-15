@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Asap:400italic,700italic);
+@import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap);
+
+html, body {
+    height: 98vh;
+    margin: 0;
+}
+
+.header {
+    font-family: 'Asap', sans-serif;
+    font-size: 75px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -2px;
+    text-align: center;
+    opacity: 1;
+    width: 1000px;
+    left: -350px;
+    top: -22px;
+    -webkit-transform: skew(-5deg);
+    transform: skew(-5deg);
+    white-space: nowrap;
+    color: #3232fc;
+}
+
+#title-container {
+    position: absolute;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+#gameboy-text {
+    /*position: absolute;*/
+    font-family: 'Asap', sans-serif;
+    font-size: 75px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -2px;
+    text-align: center;
+    opacity: 0;
+    width: 1000px;
+    left: -350px;
+    top: -22px;
+    -webkit-transform: skew(-5deg);
+    transform: skew(-5deg);
+    overflow: hidden;
+    white-space: nowrap;
+    color: #3232fc;
+    background: -webkit-linear-gradient(0deg, #3232fc 55%, #85e367 55%, #85e367 60%, #ff52e8 60%, #ff52e8 75%, #ff0151 75%, #ff0151 85%, #f9e52e 85%, #f9e52e 95%, #e8e8e8 95%);
+    background-position: 125px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: screen-gameboy-text 3s 1 linear;
+    animation: screen-gameboy-text 3.5s 1 linear;
+    visibility: hidden;
+  }
+  @keyframes screen-gameboy-text {
+    0% {
+      color: #f9e52e;
+      background-position: -120px;
+      opacity: 0;
+      visibility: visible;
+    }
+    11.7% {
+      opacity: 0;
+    }
+    12% {
+      color: #f9e52e;
+      background-position: -120px;
+      opacity: 1;
+    }
+    19.5% {
+      color: #f9e52e;
+    }
+    21% {
+      color: #ff0151;
+    }
+    28.5% {
+      color: #ff0151;
+    }
+    30% {
+      color: #ff52e8;
+    }
+    37.5% {
+      color: #ff52e8;
+    }
+    39% {
+      color: #85e367;
+    }
+    46.5% {
+      color: #85e367;
+    }
+    48% {
+      color: #3232fc;
+    }
+    54% {
+      background-position: 125px;
+    }
+    81% {
+      opacity: 1;
+    }
+    96% {
+      opacity: 0;
+    }
+    99% {
+        visibility: hidden;
+    }
+  }
+
+
+#content-container {
+    position: absolute;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-evenly;
+    width: 100%; 
+    height: 100%;
+    background-color: whitesmoke;;
+}
+
+.content-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.cart-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    .cart-card a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Inconsolata', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .cart-card a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .cart-card p {
+        margin-top: 5px;
+    }
+
+    .cart-card img {
+        max-height: 250px;
+    }
+
+@media only screen and (max-width: 600px) {
+    .cart-card img {
+        max-height: 180px;
+    }
+
+    #title-container {
+        display: none;
+    }
+}
